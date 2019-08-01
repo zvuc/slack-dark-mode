@@ -166,12 +166,12 @@ blockquote:before {
   display: block;
   width: 4px;
   border-radius: 8px;
-  background: #ddd;
+  background: #565656;
   content: "";
 }
 hr {
   border: none;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #565656;
   clear: both;
   margin-bottom: 16px;
 }
@@ -4443,6 +4443,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
   font-size: 15px;
   line-height: 1.86666667;
   line-height: normal;
+  color: #ffffff;
 }
 .c-input_text:focus {
   outline: none;
@@ -4677,7 +4678,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
 .c-badge {
   align-items: center;
   border-radius: 20px;
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   color: #1264a3;
   display: inline-flex;
   font-family: Slack-Lato, appleLogo, sans-serif;
@@ -8756,9 +8757,9 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
   text-align: initial;
   vertical-align: initial;
   cursor: pointer;
-  background: #e8f5fa;
+  background: #0e2b36;
   border-radius: 3px;
-  border: 1px solid #ddf0f8;
+  border: 1px solid #163e4d;
   vertical-align: bottom;
   display: inline-flex;
   align-items: center;
@@ -8770,7 +8771,7 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
 }
 .c-texty_workflow_token > button:hover {
   cursor: pointer;
-  background: #ddf0f8;
+  background: #163e4d;
   text-decoration: none;
 }
 .c-texty_workflow_token.is-missing > button {
@@ -8793,7 +8794,7 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
   padding-left: 4px;
 }
 .c-texty_workflow_token .c-texty_workflow_token__property {
-  border-left: 1px solid #ddf0f8;
+  border-left: 1px solid #163e4d;
   padding-left: 4px;
   margin-left: 4px;
   color: rgba(255, 255, 255, 0.7);
@@ -9028,11 +9029,11 @@ pre .c-mrkdwn__user_group--mention {
   padding: 0;
 }
 .c-mrkdwn__user_group--link {
-  background: #e8f5fa;
+  background: #0e2b36;
   color: #1264a3;
 }
 .c-mrkdwn__user_group--link:hover {
-  background: #ddf0f8;
+  background: #163e4d;
   color: #0b4c8c;
   text-decoration: none;
 }
@@ -9710,7 +9711,7 @@ input.c-input_select__filter_input.offscreen {
 }
 .c-calendar_view_header__stepper_btn:hover,
 .c-calendar_view_header__title_btn:hover {
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
 }
 .c-calendar_view_header__stepper_btn:active,
 .c-calendar_view_header__title_btn:active {
@@ -10550,7 +10551,7 @@ input.p-admin_member_table__edit_profile_input {
 }
 .c-token {
   align-items: center;
-  background: #e8f5fa;
+  background: #0e2b36;
   border-radius: 4px;
   display: flex;
   font-weight: 700;
@@ -15420,7 +15421,7 @@ input[type=text].p-prefs_modal__custom_theme_input {
   min-height: 95px;
 }
 .p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected {
-  background: #e8f5fa;
+  background: #0e2b36;
   border-color: #1d9bd1;
 }
 .p-prefs_modal__radiogroup .c-label--inline .c-label__text {
@@ -15544,7 +15545,7 @@ input[type=text].p-prefs_modal__email_forwarding_address_input {
   border-top: 1px solid #ffffff;
 }
 .p-prefs_modal__channel_overrides_row:hover {
-  background: #e8f5fa;
+  background: #0e2b36;
   border: 1px solid #1d9bd1;
   border-radius: 6px;
 }
@@ -18037,7 +18038,7 @@ span.CodeMirror-selectedtext {
 .c-message_attachment__border {
   flex-shrink: 0;
   width: 4px;
-  background-color: #565656;
+  background-color: #474747;
   border-radius: 8px;
 }
 .c-message_attachment__delete_container {
@@ -22459,7 +22460,7 @@ body.p-client_desktop--frameless:not(.p-client_desktop--no-frameless-drag):after
 .p-help_search__list__item__focus {
   cursor: pointer;
   outline: none;
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   border-radius: 6px;
   border: 1px solid #cbe7f7;
 }
@@ -22582,7 +22583,7 @@ body.p-client_desktop--frameless:not(.p-client_desktop--no-frameless-drag):after
   font-weight: 400;
   font-weight: 700;
   border-radius: 8px;
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   color: #1264a3;
   padding: 0 6px;
   margin-top: 1px;
@@ -23822,7 +23823,7 @@ input.p-workspace-search__select {
   margin: 48px 24px 16px 24px;
 }
 .p-dnd_menu__new_pill {
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   border-radius: 16px;
   color: #1264a3;
   font-size: 11px;
@@ -27449,7 +27450,7 @@ a.p-global_nav__flex_btn--link:hover {
   font-weight: 400;
   font-weight: 700;
   border-radius: 8px;
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   color: #1264a3;
   padding: 0 6px;
   margin-top: 1px;
@@ -28884,7 +28885,7 @@ a.p-global_nav__flex_btn--link:hover {
   border-color: rgba(255, 255, 255, 0.7);
 }
 .p-classic_nav__right__search--is_highlighted {
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
   color: #1264a3;
   border-color: #1264a3;
 }
@@ -29101,7 +29102,7 @@ a.p-global_nav__flex_btn--link:hover {
   color: #1264a3;
 }
 .p-classic_nav__right__button--search_small_highlighted:before {
-  background: #e8f5fa;
+  background: #0e2b36;
 }
 .p-classic_nav__right__button--search_small,
 .p-classic_nav__search_small_divider {
@@ -30630,7 +30631,7 @@ input[type=text].p-channel_sidebar__folder_heading_label_rename {
   border-bottom: 1px solid #565656;
 }
 .p-user_group_member_management__row_container--active {
-  background-color: #e8f5fa;
+  background-color: #0e2b36;
 }
 .p-user_group_member_management__row {
   display: flex;
@@ -31192,7 +31193,7 @@ span.p-app_action_picker__placeholder {
   border-bottom: none;
 }
 .p-threads_view_reply--new_reply {
-  background: #e8f5fa;
+  background: #0e2b36;
 }
 .p-threads_view .p-threads_view_reply .c-message_kit__gutter--compact {
   padding-left: 12px;

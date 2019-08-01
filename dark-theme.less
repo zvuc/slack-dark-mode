@@ -32,7 +32,11 @@
 @ui-threads-view-bg: @ui-base-010;
 @ui-threads-border: @ui-base-040;
 
+@ui-message-reply-highlight-bg: @polar-dark;
+
 @ui-textinput-bg: transparent;
+
+@ui-message-attachment-border: @ui-base-040;
 
 @ui-message-actions-border: fade(@ui-base-inverse,30%);
 @ui-message-actions-border-hover: fade(@ui-base-inverse,45%);
@@ -153,6 +157,9 @@
 @polar: #e8f5fa;
 @polar-2: #ddf0f8;
 @ocean-green: #4da28c;
+
+@polar-dark: #0e2b36;
+@polar-dark-2: #163e4d;
 
 // dnd
 @sapphire: #2d4b9b;
@@ -404,12 +411,12 @@ blockquote:before {
  display:block;
  width:4px;
  border-radius:8px;
- background:#ddd;
+ background:@ui-base-050;
  content:""
 }
 hr {
  border:none;
- border-top:1px solid #ddd;
+ border-top:1px solid @ui-base-050;
  clear:both;
  margin-bottom:16px
 }
@@ -4687,7 +4694,8 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
  width:100%;
  font-size:15px;
  line-height:1.86666667;
- line-height:normal
+ line-height:normal;
+ color: @ui-text;
 }
 .c-input_text:focus {
  outline:none;
@@ -4922,7 +4930,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
 .c-badge {
  align-items:center;
  border-radius:20px;
- background-color:@polar;
+ background-color:@polar-dark;
  color:@blue-d2;
  display:inline-flex;
  font-family:Slack-Lato,appleLogo,sans-serif;
@@ -9003,9 +9011,9 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
  text-align:initial;
  vertical-align:initial;
  cursor:pointer;
- background:@polar;
+ background:@polar-dark;
  border-radius:3px;
- border:1px solid @polar-2;
+ border:1px solid @polar-dark-2;
  vertical-align:bottom;
  display:inline-flex;
  align-items:center
@@ -9017,7 +9025,7 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
 }
 .c-texty_workflow_token>button:hover {
  cursor:pointer;
- background:@polar-2;
+ background:@polar-dark-2;
  text-decoration:none
 }
 .c-texty_workflow_token.is-missing>button {
@@ -9040,7 +9048,7 @@ input[type=text].c-input_text.p-emoji_picker__input:focus {
  padding-left:4px
 }
 .c-texty_workflow_token .c-texty_workflow_token__property {
- border-left:1px solid @polar-2;
+ border-left:1px solid @polar-dark-2;
  padding-left:4px;
  margin-left:4px;
  color:fade(@ui-text,70%)
@@ -9275,11 +9283,11 @@ pre .c-mrkdwn__user_group--mention {
  padding:0
 }
 .c-mrkdwn__user_group--link {
- background:@polar;
+ background:@polar-dark;
  color:@blue-d2
 }
 .c-mrkdwn__user_group--link:hover {
- background:@polar-2;
+ background:@polar-dark-2;
  color:@blue-d3;
  text-decoration:none
 }
@@ -9957,7 +9965,7 @@ input.c-input_select__filter_input.offscreen {
 }
 .c-calendar_view_header__stepper_btn:hover,
 .c-calendar_view_header__title_btn:hover {
- background-color:@polar
+ background-color:@polar-dark
 }
 .c-calendar_view_header__stepper_btn:active,
 .c-calendar_view_header__title_btn:active {
@@ -10797,7 +10805,7 @@ input.p-admin_member_table__edit_profile_input {
 }
 .c-token {
  align-items:center;
- background:@polar;
+ background:@polar-dark;
  border-radius:4px;
  display:flex;
  font-weight:700;
@@ -15668,7 +15676,7 @@ input[type=text].p-prefs_modal__custom_theme_input {
  min-height:95px
 }
 .p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected {
- background:@polar;
+ background:@polar-dark;
  border-color:@blue-d1
 }
 .p-prefs_modal__radiogroup .c-label--inline .c-label__text {
@@ -15792,7 +15800,7 @@ input[type=text].p-prefs_modal__email_forwarding_address_input {
  border-top:1px solid @ui-text
 }
 .p-prefs_modal__channel_overrides_row:hover {
- background:@polar;
+ background:@polar-dark;
  border:1px solid @blue-d1;
  border-radius:6px
 }
@@ -18286,7 +18294,7 @@ span.CodeMirror-selectedtext {
 .c-message_attachment__border {
  flex-shrink:0;
  width:4px;
- background-color:@ui-base-050;
+ background-color:@ui-message-attachment-border;
  border-radius:8px
 }
 .c-message_attachment__delete_container {
@@ -22708,7 +22716,7 @@ body.p-client_desktop--frameless:not(.p-client_desktop--no-frameless-drag):after
 .p-help_search__list__item__focus {
  cursor:pointer;
  outline:none;
- background-color:@polar;
+ background-color:@polar-dark;
  border-radius:6px;
  border:1px solid @tropical-blue
 }
@@ -22831,7 +22839,7 @@ body.p-client_desktop--frameless:not(.p-client_desktop--no-frameless-drag):after
  font-weight:400;
  font-weight:700;
  border-radius:8px;
- background-color:@polar;
+ background-color:@polar-dark;
  color:@blue-d2;
  padding:0 6px;
  margin-top:1px
@@ -24071,7 +24079,7 @@ input.p-workspace-search__select {
  margin:48px 24px 16px 24px
 }
 .p-dnd_menu__new_pill {
- background-color:@polar;
+ background-color:@polar-dark;
  border-radius:16px;
  color:@blue-d2;
  font-size:11px;
@@ -27699,7 +27707,7 @@ a.p-global_nav__flex_btn--link:hover {
  font-weight:400;
  font-weight:700;
  border-radius:8px;
- background-color:@polar;
+ background-color:@polar-dark;
  color:@blue-d2;
  padding:0 6px;
  margin-top:1px
@@ -29134,7 +29142,7 @@ a.p-global_nav__flex_btn--link:hover {
  border-color:fade(@ui-text,70%)
 }
 .p-classic_nav__right__search--is_highlighted {
- background-color:@polar;
+ background-color:@polar-dark;
  color:@blue-d2;
  border-color:@blue-d2
 }
@@ -29351,7 +29359,7 @@ a.p-global_nav__flex_btn--link:hover {
  color:@blue-d2
 }
 .p-classic_nav__right__button--search_small_highlighted:before {
- background:@polar
+ background:@polar-dark
 }
 .p-classic_nav__right__button--search_small,
 .p-classic_nav__search_small_divider {
@@ -30880,7 +30888,7 @@ input[type=text].p-channel_sidebar__folder_heading_label_rename {
  border-bottom:1px solid @ui-base-050
 }
 .p-user_group_member_management__row_container--active {
- background-color:@polar
+ background-color:@polar-dark
 }
 .p-user_group_member_management__row {
  display:flex;
@@ -31442,7 +31450,7 @@ span.p-app_action_picker__placeholder {
  border-bottom:none
 }
 .p-threads_view_reply--new_reply {
- background:@polar
+ background:@ui-message-reply-highlight-bg;
 }
 .p-threads_view .p-threads_view_reply .c-message_kit__gutter--compact {
  padding-left:12px;
