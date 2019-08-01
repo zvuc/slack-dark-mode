@@ -29,17 +29,31 @@
 @ui-link-hover: @blue-l1;
 @ui-link-focus: @blue-l1;
 
+@ui-threads-view-bg: @ui-base-010;
+@ui-threads-border: @ui-base-040;
+
 @ui-textinput-bg: transparent;
+
+@ui-message-actions-border: fade(@ui-base-inverse,30%);
+@ui-message-actions-border-hover: fade(@ui-base-inverse,45%);
+
+@ui-secondary-view-border: fade(@ui-base-080,40%); // fade(@ui-text,13%)
+
+@ui-flexpane-header-bg: @ui-base-020;
+@ui-flexpane-border: @ui-base-050;
 
 @ui-dialog-overlay: @black;
 @ui-dialog-base: @ui-base-010;
 
+@ui-autocomplete-bg: @ui-base-010;
+
 @ui-menu-bg: @ui-base-020;
+@ui-menu-border: fade(@ui-text,8%);
 
 @ui-tooltip-text: @ui-text;
-@ui-tooltip-bg: @ui-base-030;
+@ui-tooltip-bg: @ui-base-050;
 
-@ui-divider-hr: @ui-base-030;
+@ui-divider-hr: fade(@ui-base-080,40%);
 @ui-header-border: fade(@ui-base-080,40%);
 
 @ui-shadow: @black;
@@ -61,6 +75,18 @@
 @ui-reaction-reacted-bg: @blue-d2;
 @ui-reaction-reacted-count: @ui-text;
 @ui-emoji-yellow-bg: darken(@yellow,20%);
+
+@ui-emoji-picker-bg: @ui-base-020;
+@ui-emoji-picker-list-container-bg: @ui-base-010;
+@ui-emoji-picker-input-border: @ui-base-050;
+@ui-emoji-picker-input-focus-border: @ui-base-070;
+
+@ui-emoji-picker-highlight-1: fadeout(@yellow-green,50%);
+@ui-emoji-picker-highlight-2: fadeout(@french-pass,50%);
+@ui-emoji-picker-highlight-3: fadeout(@portica,50%);
+@ui-emoji-picker-highlight-4: fadeout(@mauve,50%);
+@ui-emoji-picker-highlight-5: fadeout(@navajo-white,50%);
+@ui-emoji-picker-highlight-6: fadeout(@fog,50%);
 
 
 // graytone
@@ -2398,7 +2424,7 @@ textarea {
  color:@ui-text
 }
 .c-button--outline:hover {
- box-shadow:0 1px 3px 0 fade(@ui-shadow,8%)
+ box-shadow:0 1px 3px 0 fade(@ui-text,8%)
 }
 .c-button--outline:active {
  background:fade(@ui-base-010,83%);
@@ -2667,7 +2693,7 @@ textarea {
  margin-left:16px
 }
 .c-toast {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
  position:absolute;
  display:flex;
  align-items:flex-start;
@@ -3279,7 +3305,7 @@ a.c-dialog__footer_link:hover {
  padding:0;
  max-width:280px;
  z-index:999;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,35%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,35%)
 }
 .c-new_locale_toast__content {
  padding:10px 16px 12px 16px
@@ -3350,7 +3376,7 @@ body.p-client_desktop--frameless .c-sk-overlay {
  position:relative;
  transition:opacity .16s linear,transform .16s cubic-bezier(.36,.19,.29,1);
  transform:scale(.95);
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 18px 48px 0 fade(@ui-shadow,35%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 18px 48px 0 fade(@ui-shadow,35%)
 }
 .c-sk-modal:focus {
  outline:none
@@ -5179,7 +5205,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
  position:relative
 }
 .c-submenu .c-menu {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 18px 48px 0 fade(@ui-shadow,12%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 18px 48px 0 fade(@ui-shadow,12%)
 }
 .c-submenu__container {
  position:fixed
@@ -5213,7 +5239,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
  border-bottom:0
 }
 .c-menu {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,12%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,12%);
  background-color:@ui-menu-bg;
  border-radius:6px;
  -webkit-user-select:none;
@@ -5252,7 +5278,7 @@ textarea.c-input_textarea--with_inline_alerttextarea.c-input_textarea--with_erro
  padding:4px 24px
 }
 .p-member_profile_card {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
  background:@ui-base;
  border-radius:8px;
  overflow:hidden;
@@ -6997,12 +7023,12 @@ input[type=checkbox].c-input_checkbox:focus {
  height:64px
 }
 .c-menu.p-emoji_picker {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
  position:relative;
  width:361px;
  z-index:1012;
  font-size:.95rem;
- background:@ui-base-020;
+ background:@ui-emoji-picker-bg;
  line-height:1rem;
  outline:none;
  display:inline-block;
@@ -7022,7 +7048,7 @@ body.desktop .p-emoji_picker {
  max-height:270px;
  overflow-y:auto;
  overflow-x:hidden;
- background:@ui-base;
+ background:@ui-emoji-picker-list-container-bg;
  position:relative;
  border-right:0
 }
@@ -7094,27 +7120,27 @@ body.desktop .p-emoji_picker {
 }
 .p-emoji_picker__list_item[data-color-index="0"].key_selection,
 .p-emoji_picker__list_item[data-color-index="0"]:hover {
- background:@yellow-green
+ background:@ui-emoji-picker-highlight-1
 }
 .p-emoji_picker__list_item[data-color-index="1"].key_selection,
 .p-emoji_picker__list_item[data-color-index="1"]:hover {
- background:@french-pass
+ background:@ui-emoji-picker-highlight-2
 }
 .p-emoji_picker__list_item[data-color-index="2"].key_selection,
 .p-emoji_picker__list_item[data-color-index="2"]:hover {
- background:@portica
+ background:@ui-emoji-picker-highlight-3
 }
 .p-emoji_picker__list_item[data-color-index="3"].key_selection,
 .p-emoji_picker__list_item[data-color-index="3"]:hover {
- background:@mauve
+ background:@ui-emoji-picker-highlight-4
 }
 .p-emoji_picker__list_item[data-color-index="4"].key_selection,
 .p-emoji_picker__list_item[data-color-index="4"]:hover {
- background:@navajo-white
+ background:@ui-emoji-picker-highlight-5
 }
 .p-emoji_picker__list_item[data-color-index="5"].key_selection,
 .p-emoji_picker__list_item[data-color-index="5"]:hover {
- background:@fog
+ background:@ui-emoji-picker-highlight-6
 }
 .p-emoji_picker__list_item .emoji-sizer {
  line-height:20px
@@ -7150,7 +7176,7 @@ body.desktop .p-emoji_picker {
  font-weight:700;
  line-height:1.5rem;
  position:relative;
- background:fade(@ui-base,95%)
+ background:fade(@ui-emoji-picker-list-container-bg,95%)
 }
 .p-emoji_picker__heading--handy_rxns {
  float:left;
@@ -7181,14 +7207,16 @@ input[type=text].c-input_text.p-emoji_picker__input {
  height:28px;
  width:100%;
  border-radius:1rem;
- outline:none
+ outline:none;
+ color:@ui-text;
+ border-color:@ui-emoji-picker-input-border;
 }
 input[type=text].c-input_text.p-emoji_picker__input:focus {
  box-shadow:inset 0 0 0 fade(@ui-text,30%);
- border-color:@ui-base-080
+ border-color:@ui-emoji-picker-input-focus-border;
 }
 .p-emoji_picker__input_container {
- background:@ui-base;
+ background:@ui-emoji-picker-list-container-bg;
  padding:8px;
  position:relative
 }
@@ -10090,7 +10118,7 @@ input.c-input_select__filter_input.offscreen {
  border-radius:4px
 }
 .c-date_picker__dropdown {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
  background-color:@ui-base;
  padding:16px;
  border-radius:6px;
@@ -11920,8 +11948,8 @@ input[type=radio].c-input_radio:focus {
  margin-left:-2px
 }
 .c-texty_autocomplete {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
- background:@ui-base;
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
+ background:@ui-autocomplete-bg;
  border-radius:6px;
  display:flex;
  flex-direction:column;
@@ -12165,7 +12193,7 @@ input[type=radio].c-input_radio:focus {
  background:@ui-base;
  border-radius:8px;
  padding:20px 24px 24px 24px;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 18px 48px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 18px 48px 0 fade(@ui-shadow,8%);
  z-index:1053
 }
 .c-coachmark:focus {
@@ -15487,7 +15515,7 @@ input[type=text].c-lazy_filter_select__input.c-input_text:focus {
  color:@ui-base-090
 }
 .c-color_picker__popover {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,12%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,12%);
  background:@ui-base;
  z-index:1012;
  border-radius:6px;
@@ -15610,7 +15638,7 @@ input[type=text].c-lazy_filter_select__input.c-input_text:focus {
  height:60px;
  border-radius:6px;
  margin-top:8px;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 1px 3px 0 fade(@ui-shadow,8%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 1px 3px 0 fade(@ui-shadow,8%)
 }
 .p-prefs_modal__custom_theme_picker {
  float:left;
@@ -15877,10 +15905,10 @@ input[type=text].p-prefs_modal__email_forwarding_address_input {
  margin-top:-18px;
  background:@ui-base;
  border-radius:50%;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 1px 3px 0 fade(@ui-shadow,8%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 1px 3px 0 fade(@ui-shadow,8%)
 }
 .p-file_viewer__nav:hover {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%)
 }
 .p-file_viewer__nav--prev {
  left:16px
@@ -21566,7 +21594,7 @@ a.c-message__call_name--linked {
 }
 .c-message_actions__container {
  background:@ui-base;
- border:.0625rem solid fade(@ui-base-inverse,15%);
+ border:.0625rem solid @ui-message-actions-border;
  border-radius:.375em;
  transition:all 50ms ease-in;
  transition-property:border-color,box-shadow;
@@ -21574,7 +21602,7 @@ a.c-message__call_name--linked {
 }
 .c-message_actions__container:hover {
  box-shadow:0 1px 1px fade(@ui-shadow,10%);
- border-color:fade(@ui-base-inverse,30%)
+ border-color: @ui-message-actions-border-hover;
 }
 .c-message_actions__container .c-message_actions__button:first-child {
  border-top-left-radius:.375em;
@@ -21592,7 +21620,7 @@ a.c-message__call_name--linked {
  padding:3px 7px;
  color:@ui-base-090;
  border:none;
- border-right:1px solid fade(@ui-base-inverse,15%);
+ border-right:1px solid @ui-message-actions-border;
  transition:all 50ms ease-in;
  transition-property:background,border,opacity
 }
@@ -22577,7 +22605,7 @@ body.p-client_desktop--frameless:not(.p-client_desktop--no-frameless-drag):after
  grid-template-rows:44px auto;
  grid-template-areas:"p-workspace__secondary_view_header" "p-workspace__secondary_view_contents";
  overflow:hidden;
- border-left:1px solid fade(@ui-text,13%)
+ border-left:1px solid @ui-secondary-view-border
 }
 .p-workspace--classic-nav .p-workspace__secondary_view {
  grid-template-areas:"p-workspace__secondary_view_contents";
@@ -26127,7 +26155,7 @@ a.c-search_message__replies_count {
  height:100%;
  font-size:16px;
  line-height:16px;
- background-color:fade(@ui-base-inverse,40%)
+ background-color:@ui-dialog-overlay
 }
 .c-search_modal:not(.c-search_modal--primarysearch)>.popover {
  top:12px!important
@@ -28168,10 +28196,6 @@ a.p-global_nav__flex_btn--link:hover {
 }
 .p-message_container_loading {
  background-color:@ui-base;
- background-image:url(https://a.slack-edge.com/d5d4a/img/unread/uv-loader@2x.gif);
- background-size:200px 200px;
- background-repeat:no-repeat;
- background-position:50%;
  position:absolute;
  top:0;
  right:0;
@@ -28181,6 +28205,18 @@ a.p-global_nav__flex_btn--link:hover {
  display:flex;
  align-items:center;
  justify-content:center
+}
+.p-message_container_loading:before {
+ position:absolute;
+ top:0;
+ right:0;
+ bottom:0;
+ left:0;
+ background-image:url(https://a.slack-edge.com/d5d4a/img/unread/uv-loader@2x.gif);
+ background-size:200px 200px;
+ background-repeat:no-repeat;
+ background-position:50%;
+ filter:invert(1);
 }
 .p-message_container_loading__msg {
  text-align:center;
@@ -30406,12 +30442,14 @@ input[type=text].p-channel_sidebar__folder_heading_label_rename {
 .c-message_list__placeholders--light {
  background-image:url(https://a.slack-edge.com/9ed76/img/message_list_placeholders_light.svg);
  height:2097px;
- margin-left:19px
+ margin-left:19px;
+ filter: invert(50%)
 }
 .c-message_list__placeholders--dense {
  background-image:url(https://a.slack-edge.com/c7007/img/message_list_placeholders_dense.svg);
  height:1812px;
- margin-left:19px
+ margin-left:19px;
+ filter: invert(50%)
 }
 .c-message_list__placeholders--legacy.c-message_list__placeholders--light {
  margin-left:25px
@@ -30426,7 +30464,7 @@ input[type=text].p-channel_sidebar__folder_heading_label_rename {
  border:1px solid @ui-base;
  max-width:528px;
  margin:96px auto;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 18px 48px 0 fade(@ui-shadow,8%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 18px 48px 0 fade(@ui-shadow,8%)
 }
 .p-unavailable_channel_thread {
  border:none;
@@ -31385,7 +31423,7 @@ span.p-app_action_picker__placeholder {
  height:100%;
  top:0;
  left:0;
- background:@ui-base-020
+ background:@ui-threads-view-bg
 }
 #client-ui .p-threads_view {
  font-size:15px;
@@ -31393,13 +31431,13 @@ span.p-app_action_picker__placeholder {
  font-weight:400
 }
 .p-threads_view_root {
- border:1px solid @ui-base-050;
+ border:1px solid @ui-threads-border;
  border-top-left-radius:12px;
  border-top-right-radius:12px;
  border-bottom:none
 }
 .p-threads_view_reply {
- border:1px solid @ui-base-050;
+ border:1px solid @ui-threads-border;
  border-top:none;
  border-bottom:none
 }
@@ -31444,8 +31482,8 @@ span.p-app_action_picker__placeholder {
  align-items:center;
  background:@ui-base;
  padding-left:12px;
- border-left:1px solid @ui-base-050;
- border-right:1px solid @ui-base-050
+ border-left:1px solid @ui-threads-border;
+ border-right:1px solid @ui-threads-border
 }
 .p_threads_view_load_newer_button:hover,
 .p_threads_view_load_older_button:hover {
@@ -31480,10 +31518,10 @@ span.p-app_action_picker__placeholder {
  width:100%;
  position:absolute;
  top:50%;
- border-top:1px solid @ui-base-050
+ border-top:1px solid @ui-threads-border
 }
 .p-threads_view__divider_label {
- background:@ui-base-020;
+ background:@ui-threads-view-bg;
  color:@ui-base-090;
  padding:.25rem .75rem;
  display:inline-block;
@@ -31533,7 +31571,7 @@ span.p-app_action_picker__placeholder {
  text-align:center
 }
 .p-threads_view__footer {
- border:1px solid @ui-base-050;
+ border:1px solid @ui-threads-border;
  border-top:none;
  border-bottom-left-radius:12px;
  border-bottom-right-radius:12px;
@@ -31981,7 +32019,7 @@ span.p-app_action_picker__placeholder {
 .p-app_space_profile__screenshots_item {
  border-radius:4px;
  transition:box-shadow .2s ease;
- box-shadow:0 0 0 1px fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border;
  margin:0 10px 10px 0;
  display:inline-block;
  position:relative;
@@ -31989,7 +32027,7 @@ span.p-app_action_picker__placeholder {
  height:112.5px
 }
 .p-app_space_profile__screenshots_item:hover {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%)
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%)
 }
 .p-app_space_profile__screenshots_item>img {
  object-fit:cover;
@@ -31999,7 +32037,7 @@ span.p-app_action_picker__placeholder {
 .p-app_space_profile__youtube_play_button {
  pointer-events:none;
  position:absolute;
- background-color:fade(@ui-base-inverse,40%);
+ background-color:@ui-dialog-overlay;
  top:50%;
  left:50%;
  transform:translateX(-50%) translateY(-50%);
@@ -32159,8 +32197,8 @@ span.p-app_action_picker__placeholder {
  margin-top:1px
 }
 .p-flexpane_header {
- background:@ui-base-020;
- border-bottom:1px solid @ui-base-050;
+ background:@ui-flexpane-header-bg;
+ border-bottom:1px solid @ui-flexpane-border;
  padding:12px 16px
 }
 .p-flexpane_header__primary {
@@ -32210,9 +32248,9 @@ span.p-app_action_picker__placeholder {
  min-height:0
 }
 .p-flexpane__floating_loader {
- box-shadow:0 0 0 1px fade(@ui-shadow,8%),0 4px 12px 0 fade(@ui-shadow,8%);
+ box-shadow:0 0 0 1px @ui-menu-border,0 4px 12px 0 fade(@ui-shadow,8%);
  align-items:center;
- background:@ui-base;
+ background:@ui-base-020;
  border-radius:50%;
  display:flex;
  height:34px;
@@ -32223,21 +32261,32 @@ span.p-app_action_picker__placeholder {
  width:34px;
  z-index:1
 }
+// message list placeholder
 .p-flexpane__body--empty_loading {
  background-color:@ui-base;
+ position:relative;
+ background-image:none;
+}
+.p-flexpane__body--empty_loading:before {
+ content: "";
+ position:absolute;
+ top:0;
+ bottom:0;
+ right:0;
+ left:0;
  background-image:url(https://a.slack-edge.com/9ed76/img/message_list_placeholders_light.svg);
  background-position:16px top;
  background-repeat:repeat-y;
- position:relative
+ filter:invert(1)
 }
 .p-flexpane__body--empty_loading:after {
+ content:"";
  background-image:linear-gradient(transparent,@ui-base);
  bottom:0;
- content:"";
- height:200px;
  left:0;
  position:absolute;
- width:100%
+ width:100%;
+ height: 200px;
 }
 .p-flexpane__body--empty {
  align-items:center;
